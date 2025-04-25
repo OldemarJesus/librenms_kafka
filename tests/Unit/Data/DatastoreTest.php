@@ -44,6 +44,7 @@ class DatastoreTest extends TestCase
             'opentsdb',
             'prometheus',
             'rrd',
+            'kafka',
         ]);
     }
 
@@ -64,6 +65,7 @@ class DatastoreTest extends TestCase
         Config::set('influxdbv2.enable', true);
         Config::set('opentsdb.enable', true);
         Config::set('prometheus.enable', true);
+        Config::set('kafka.enable', false);
 
         $ds = $this->app->make('Datastore');
         $stores = $ds->getStores();

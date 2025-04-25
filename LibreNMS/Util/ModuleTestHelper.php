@@ -89,6 +89,7 @@ class ModuleTestHelper
         Config::set('influxdbv2.enable', false);
         Config::set('graphite.enable', false);
         Config::set('prometheus.enable', false);
+        Config::set('kafka.enable', false);
     }
 
     private static function compareOid($a, $b)
